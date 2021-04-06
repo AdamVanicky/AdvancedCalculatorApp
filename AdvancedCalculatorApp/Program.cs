@@ -37,6 +37,10 @@ namespace AdvancedCalculatorApp
 
                 int outputRecursive = CalculateRecursive(iX, iN);
 
+                vysledek = 1;
+                i = 1;
+                faktorial = 1;
+
                 Console.WriteLine($"S = {outputRecursive} /výsledek vypočítán pomocí rekurze/");
 
                 Console.ReadLine();
@@ -92,7 +96,7 @@ namespace AdvancedCalculatorApp
         static int faktorial = 1;
         static int CalculateRecursive(int inX, int inN)
         {
-            if(i != inN)
+            if(i <= inN)
             {
                 faktorial *= i;
                 vysledek += i * inX / faktorial;
@@ -100,6 +104,7 @@ namespace AdvancedCalculatorApp
             }
             else
             {
+                
                 return vysledek;
             }
             
